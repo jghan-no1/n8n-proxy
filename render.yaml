@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app.proxy.py:app"
+    startCommand: "gunicorn slack_proxy:app"
     envVars:
       - key: N8N_WEBHOOK_BASE_URL
         value: https://newzips.iptime.org
