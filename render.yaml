@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-slack-n8n-proxy
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: N8N_WEBHOOK_BASE_URL
+        value: https://newzips.iptime.org
