@@ -7,4 +7,4 @@ services:
     startCommand: "gunicorn slack_proxy:app"
     envVars:
       - key: N8N_WEBHOOK_BASE_URL
-        value: https://newzips.iptime.org
+        value: http://newzips.iptime.org:35678
